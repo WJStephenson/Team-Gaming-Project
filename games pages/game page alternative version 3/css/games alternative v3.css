@@ -124,25 +124,22 @@ header {
   font-size: 1rem;
 }
 
+header > a > h2 {
+  text-decoration: none;
+}
 .container {
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.a-link {
-  text-decoration: none;
-  color: var(--primary-text);
-  /* transition: ease-in-out 250ms; */
-}
-
-.a-link:hover {
-  transform: scale(1.1);
-}
-
-.slider-wrapper {
+#main-section {
   position: relative;
-  max-width: 48rem;
+  max-width: 12rem;
   margin: 0 auto;
 }
+
 .container .slider-wrapper .slider {
 }
 
