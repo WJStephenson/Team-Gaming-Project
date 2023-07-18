@@ -1,137 +1,3 @@
-// const apiKey = 'a3ed24058c6960422612f376ca988d6bdc6d4a67'; // Remplacez par votre clé d'API Giant Bomb
-
-// // Fetch for Slide 1
-
-// function get_random_image() {
-//     fetch('https://picsum.photos/800/600')
-//       .then(response => {
-//         if (response.ok) {
-//           return response.url;
-//         } else {
-//           throw new Error('Image not found');
-//         }
-//       })
-//       .then(imageUrl => {
-//         document.getElementById('slide-1').src = imageUrl;
-//       })
-//       .catch(error => console.log(error));
-//   }
-
-//   get_random_image();
-
-// //   Fetch for Slide 2
-
-// function get_random_image2() {
-//     fetch('https://picsum.photos/800/600')
-//       .then(response => {
-//         if (response.ok) {
-//           return response.url;
-//         } else {
-//           throw new Error('Image not found');
-//         }
-//       })
-//       .then(imageUrl => {
-//         document.getElementById('slide-2').src = imageUrl;
-//       })
-//       .catch(error => console.log(error));
-//   }
-
-//   get_random_image2();
-
-// //   Fetch for Slide 3
-
-// function get_random_image3() {
-//     fetch('https://picsum.photos/800/600')
-//       .then(response => {
-//         if (response.ok) {
-//           return response.url;
-//         } else {
-//           throw new Error('Image not found');
-//         }
-//       })
-//       .then(imageUrl => {
-//         document.getElementById('slide-3').src = imageUrl;
-//       })
-//       .catch(error => console.log(error));
-//   }
-
-//   get_random_image3();
-
-// //   Fetch for Slide 4
-
-// function get_random_image4() {
-//     fetch('https://picsum.photos/800/600')
-//       .then(response => {
-//         if (response.ok) {
-//           return response.url;
-//         } else {
-//           throw new Error('Image not found');
-//         }
-//       })
-//       .then(imageUrl => {
-//         document.getElementById('slide-4').src = imageUrl;
-//       })
-//       .catch(error => console.log(error));
-//   }
-
-
-// V1
-// const slider1 = document.getElementById("slide-1")
-// const slider2 = document.getElementById("slide-2")
-// const slider3 = document.getElementById("slide-3")
-// const slider4 = document.getElementById("slide-4")
-
-// function searchGames() {
-//   const offset = Math.floor(Math.random() * 80000);
-//   fetch(
-//     `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&offset=${offset}&limit=1`
-//   )
-//     .then((res) => res.json())
-//     .then((json) => {
-//       const results = json.results;
-//       console.log(results[0].image.original_url);
-//       console.log(results[0].name);
-//       // let img_random = document.getElementById('slide-1').src = results[0].image.original_url;
-//       slider1.src = results[0].image.original_url;
-//     })
-//     .catch((err) => console.log(err));
-//   }
-
-// const numberOfImagesRequired = 6;
-
-// for (let i = 0; i < numberOfImagesRequired; i++) {
-//   searchGames();
-// }
-
-// Backup
-
-// function searchGames() {
-//   const offset = Math.floor(Math.random() * 80000);
-//   fetch(
-//     `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&offset=${offset}&limit=1`
-//   )
-//     .then((res) => res.json())
-//     .then((json) => {
-//       const results = json.results;
-//         console.log(results[0].image.original_url);
-//         console.log(results[0].name);
-//       })
-//     .then(results => {
-//           document.getElementById('slide-4').src = results[0].image.original_url;
-//         })
-//     .catch((err) => console.log(err))
-// }
-
-// const numberOfImagesRequired = 6;
-
-// for (let i = 0; i < numberOfImagesRequired; i++) {
-//   searchGames();
-// }
-
-
-
-//   get_random_image4();
-
 
 
 // // //   Giant Bomb Api
@@ -179,37 +45,96 @@
 // });
 
 
+// const apiKey = 'a3ed24058c6960422612f376ca988d6bdc6d4a67';
+// const slideData = [
+//   { slideId: 'slide-1', titleId: 'slide-1-title', descriptionId: 'slide-1-description' },
+//   { slideId: 'slide-2', titleId: 'slide-2-title', descriptionId: 'slide-2-description' },
+//   { slideId: 'slide-3', titleId: 'slide-3-title', descriptionId: 'slide-3-description' },
+//   { slideId: 'slide-4', titleId: 'slide-4-title', descriptionId: 'slide-4-description' }
+// ];
+
+// function getRandomOffset() {
+//   return Math.floor(Math.random() * 80000);
+// }
+
+// function fetchGameData(offset) {
+//   const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&offset=${offset}&limit=1`;
+
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       const game = data.results[0];
+//       return {
+//         imageUrl: game.image.original_url,
+//         title: game.name,
+//         description: game.description
+//       };
+//     })
+//     .catch(error => console.log(error));
+// }
+
+// function updateSlideContent(slideId, titleId, descriptionId) {
+//   const slide = document.getElementById(slideId);
+//   const titleElement = document.getElementById(titleId);
+//   const descriptionElement = document.getElementById(descriptionId);
+
+//   const offset = getRandomOffset();
+
+//   fetchGameData(offset)
+//     .then(gameData => {
+//       slide.src = gameData.imageUrl;
+//       titleElement.textContent = gameData.title;
+//       descriptionElement.innerHTML = gameData.name;
+//     })
+//     .catch(error => console.log(error));
+// }
+
+// slideData.forEach(slide => {
+//   updateSlideContent(slide.slideId, slide.titleId, slide.descriptionId);
+// });
+
+
 const apiKey = 'a3ed24058c6960422612f376ca988d6bdc6d4a67';
 
-const imageReferences = [
-  document.getElementById("slide-1"),
-  document.getElementById("slide-2"),
-  document.getElementById("slide-3"),
-  document.getElementById("slide-4")
-];
-
-function searchGames() {
-  const offset = Math.floor(Math.random() * 80000);
-  return fetch(
-    `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&offset=${offset}&limit=1`
-  )
-    .then((res) => res.json())
-    .then((json) => {
-      const results = json.results;
-      return {
-        imageUrl: results[0].image.original_url,
-        title: results[0].name
-      };
-    })
-    .catch((err) => console.log(err));
+function getRandomOffset() {
+  return Math.floor(Math.random() * 80000);
 }
 
-imageReferences.forEach((imageRef, index) => {
-  searchGames()
-    .then((gameData) => {
-      imageRef.src = gameData.imageUrl;
-      const titleElement = document.getElementById(`slide-${index + 1}-title`);
-      titleElement.textContent = gameData.title;
+function fetchGameData(offset) {
+  const url = `https://www.giantbomb.com/api/games/?api_key=${apiKey}&format=json&offset=${offset}&limit=1`;
+
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const game = data.results[0];
+      return {
+        imageUrl: game.image.original_url,
+        title: game.name,
+        description: game.guid
+      };
     })
-    .catch((err) => console.log(err));
+    .catch(error => console.log(error));
+}
+
+function updateCardContent(cardId) {
+  const card = document.querySelector(".card");
+  const imageElement = card.querySelector('.imgBox img');
+  const titleElement = card.querySelector('.content h2');
+  const descriptionElement = card.querySelector('.content p');
+
+  const offset = getRandomOffset();
+
+  fetchGameData(offset)
+    .then(gameData => {
+      imageElement.src = gameData.imageUrl;
+      titleElement.textContent = gameData.title;
+      descriptionElement.textContent = gameData.guid;
+    })
+    .catch(error => console.log(error));
+}
+
+const cardIds = ['card-1', 'card-2'];
+
+cardIds.forEach(cardId => {
+  updateCardContent(cardId);
 });
