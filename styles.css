@@ -218,6 +218,20 @@ section {
   margin-bottom: 2rem;
 }
 
+section img {
+  width: 80vw;
+  max-width: 1440px;
+}
+
+section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 1440px;
+}
+
 section div {
   display: flex;
   justify-content: center;
@@ -317,6 +331,14 @@ footer i:active {
   }
 
   section div {
+    width: 90vw;
+  }
+
+  section img {
+    width: 90vw;
+  }
+
+  section p {
     width: 90vw;
   }
 
