@@ -42,7 +42,7 @@ body {
   margin-bottom: 8rem;
 }
 
-.about-info {  
+.about-info {
   color: var(--primary-text);
   font-size: 0.8rem;
 }
@@ -83,4 +83,3 @@ body {
     height: auto;
   }
 }
-  
