@@ -16,15 +16,17 @@
 html,
 body {
   font-family: "Poppins", sans-serif;
-  margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
+
 
 .about-img {
   border-radius: 50%;
   height: 70px;
   width: 70px;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 10px;
   border: 3px solid #ff8a00;
 }
 
@@ -35,8 +37,9 @@ body {
 }
 
 .about-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 8rem;
 }
 
 .about-info {  
@@ -45,12 +48,39 @@ body {
 }
 
 .about-cards {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid #ff8a00;
+  border-radius: 2rem;
   margin: 10px;
-  padding: 5px;
+  padding: 1rem;
   flex-wrap: wrap;
+  height: 300px;
 }
 
 .contact {
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
 }
+
+/* footer>a>i {
+  color: var(--primary-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+} */
+
+/*media queries*/
+
+
+@media screen and (max-width: 1000px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cards {
+    width: 80dvw;
+    max-width: 600px;
+    height: auto;
+  }
+}
+  

@@ -285,7 +285,7 @@ footer {
   box-shadow: 1px 1px 10px var(--primary-bg);
 }
 
-footer>i {
+footer i {
   color: var(--primary-text);
   font-size: 1.5rem;
   cursor: pointer;
@@ -387,7 +387,7 @@ footer i:active {
     font-size: 0.8rem;
   }
 
-  footer>i {
+  footer i {
     font-size: 1rem;
   }
 
