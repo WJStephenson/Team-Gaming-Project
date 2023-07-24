@@ -25,32 +25,6 @@ body {
   color: var(--primary-text);
 }
 
-/* styling for the nav header */
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10rem;
-  align-items: center;
-  height: 90px;
-  background-color: var(--primary-bg);
-  box-shadow: 1px 1px 10px var(--primary-bg);
-}
-
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 4rem;
-}
-
-.nav-links a {
-  color: var(--primary-text);
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
 /* styling for the footer */
 
 footer {
@@ -70,31 +44,6 @@ footer>a>i {
   color: var(--primary-text);
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-/* styling for the theme button */
-
-#theme-button {
-  color: var(--primary-text);
-  font-size: 1.5rem;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 45px;
-  top: calc(45px - 1.5rem / 2);
-}
-
-/* hover and click animations for anchors and icons */
-
-.nav-links a:hover,
-footer i:hover {
-  scale: 1.1;
-}
-
-.nav-links a:active,
-footer i:active {
-  scale: 1;
 }
 
 /* Games Page Only CSS */
