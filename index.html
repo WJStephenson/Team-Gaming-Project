@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/861319270c.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./styles.css" />
-    <title>SS Gaming</title>
-  </head>
-  <body>
-    <nav>
-        <img src="./Assets/SuicideLogo.png" alt="Logo" class="logo" />
-        <div class="nav-links">
-          <a href="./index.html">HOME</a>
-          <a href="./games pages/games.html">GAMES</a>
-          <a href="./Team-Project-Hamit-Licina/about.html">ABOUT</a>
-        </div>
-      </nav>
-      
-      <div class="search-container">
-        <div class="search-bar">
-          <input type="text" placeholder="Search" />
-          <button>Search</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/861319270c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <title>SS Gaming</title>
+</head>
+
+<body>
+  <nav>
+    <img src="./Assets/SuicideLogo.png" alt="Logo" class="logo" />
+    <div class="desktop-nav">
+      <div class="nav-links">
+        <a href="./index.html">HOME</a>
+        <a href="./games pages/games.html">GAMES</a>
+        <a href="./Team-Project-Hamit-Licina/about.html">ABOUT</a>
       </div>
-      <button id="theme-button"><i class="fa-regular fa-sun"></i></button>     
-      </nav>     
-      <main>
-        <section class="section-about">
-          <h2>About</h2>
-          <!-- Add your content here -->
-        </section>
-        <section class="section-games">
-          <h2>Games</h2>
-          <!-- Add your content here -->
-        </section>
-        <section class="section-reviews">
-          <h2>Reviews</h2>
-          <!-- Add your content here -->
-        </section>
-       
-      </main>     
-    <footer>
-      <i class="fa-brands fa-youtube"></i>
-      <h3>Suicide Squad Gaming 2023</h3>
-      <i class="fa-brands fa-github"></i>
-    </footer>
-    <script src="./theme.js"></script>
-  </body>
+      <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+    </div>
+    <div class="mobile-nav">
+      <label for="menu-checkbox" class="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="menu-checkbox">
+      <img src="./Assets/SuicideLogo.png" alt="Logo" class="logo" />
+      <div class="side-menu">
+        <label for="menu-checkbox" class="menu-toggle" id="close-menu"><i class="fa-solid fa-x"></i></label>
+        <a href="./index.html">HOME</a>
+        <a href="./games pages/games.html">GAMES</a>
+        <a href="./Team-Project-Hamit-Licina/about.html">ABOUT</a>
+      </div>
+      <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+    </div>
+  </nav>
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" id="search-input" />
+      <button id="search-button">Search</button>
+    </div>
+  </div>
+  <main>
+    <section class="section-about">
+      <h1>About</h1>
+      <div id="about-container">
+        <p>Search for a game!</p>
+      </div>
+    </section>
+    <section class="section-release">
+      <h1>Release</h1>
+      <div id="release-container">
+        <p>We know when it was released!</p>
+      </div>
+    </section>
+    <section class="section-reviews">
+      <h1>Reviews</h1>
+      <div id="review-container">
+        <p>We will provide reviews!</p>
+      </div>
+    </section>
+    <section class="section-similar">
+      <h1>Similar Games</h1>
+      <div id="similar-container">
+        <p>We will show you similar games!</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <i class="fa-brands fa-youtube"></i>
+    <h3>Suicide Squad Gaming 2023</h3>
+    <i class="fa-brands fa-github"></i>
+  </footer>
+  <script src="./main.js" type="module"></script>
+</body>
+
 </html>

@@ -66,7 +66,7 @@ footer {
   box-shadow: 1px 1px 10px var(--primary-bg);
 }
 
-footer > a > i {
+footer>a>i {
   color: var(--primary-text);
   font-size: 1.5rem;
   cursor: pointer;
@@ -143,8 +143,8 @@ header {
   max-width: 48rem;
   margin: 0 auto;
 }
-.container .slider-wrapper .slider {
-}
+
+.container .slider-wrapper .slider {}
 
 .slider {
   display: flex;
