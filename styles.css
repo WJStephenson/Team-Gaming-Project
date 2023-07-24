@@ -203,6 +203,10 @@ main {
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
+
+  /* Trying to fix the x Axis overflow */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 h1 {
