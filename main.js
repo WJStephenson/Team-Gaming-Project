@@ -5,7 +5,7 @@ import { apiKey } from './modules/apiKey.js';
 import { createAbout, createRelease, createSimilar, createReview } from './modules/cards.js';
 
 
-//light and dark mode, load in dark mode by default
+//light and dark mode, load in dark mode by default, load in previously set mode if page is refreshed
 
 export const themeButtons = document.querySelectorAll('.theme-button');
 
@@ -65,6 +65,7 @@ function searchGameGUID(GUID) {
 
 function createCards(data) {
     const results = data.results;
+    console.log(results);
     createAbout(results);
     createRelease(results);
     createSimilar(results);

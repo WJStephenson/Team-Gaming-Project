@@ -1,3 +1,5 @@
+// imports
+
 import { apiKey } from "./apiKey.js";
 import { searchGameName } from "../main.js";
 
@@ -7,10 +9,12 @@ const releaseContainer = document.getElementById("release-container");
 const aboutContainer = document.getElementById("about-container");
 const searchInput = document.getElementById("search-input");
 
+//create cards for game search results
+// each function will check for a value in the data object and if it is undefined, it will display a message saying no data was found
 
 export function createAbout(data) {
     aboutContainer.innerHTML = '';
-    if (data.description === null) {
+    if (data.description == undefined) {
         const aboutP = document.createElement('p');
         aboutP.innerHTML = 'No description found';
         aboutContainer.appendChild(aboutP);
@@ -24,7 +28,7 @@ export function createAbout(data) {
 
 export function createRelease(data) {
     releaseContainer.innerHTML = '';
-    if (data.original_release_date === null) {
+    if (data.original_release_date == undefined) {
         const releaseP = document.createElement('p');
         releaseP.innerHTML = 'No release date found';
         releaseContainer.appendChild(releaseP);
@@ -64,13 +68,15 @@ export function createSimilar(data) {
 
 export function createReview(data) {
     reviewContainer.innerHTML = '';
-    const reviewURL = data.reviews[0].api_detail_url;
-    if (reviewURL === null) {
+    console.log(data.reviews);
+    if (data.reviews == undefined) {
+        console.log('no reviews found, sorry');
         const reviewP = document.createElement('p');
         reviewP.innerHTML = 'No review found';
         reviewContainer.appendChild(reviewP);
         return;
     }
+    const reviewURL = data.reviews[0].api_detail_url;
     fetch(`${reviewURL}?api_key=${apiKey}&format=json`)
         .then((res) => res.json())
         .then((data) => {

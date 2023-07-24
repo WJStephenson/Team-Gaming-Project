@@ -1,4 +1,8 @@
+//imports
+
 import { themeButtons as buttons } from '../main.js';
+
+//store icons and colors for light and dark mode
 
 const lightModeIcon = `<i class="fa-regular fa-sun"></i>`;
 const darkModeIcon = `<i class="fa-regular fa-moon"></i>`;
@@ -15,7 +19,7 @@ const colorVariables = [`--primary-text`,
     `--primary-bg`,
     `--secondary-bg`];
 
-
+//using sessions storage and toggling between themes
 
 export function setTheme() {
     let mode = sessionStorage.getItem('mode');
