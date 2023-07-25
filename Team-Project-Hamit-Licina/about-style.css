@@ -63,6 +63,11 @@ body {
   gap: 2rem;
 }
 
+h6 > a {
+  text-decoration: none;
+  color: #ff8a00;
+}
+
 /* footer>a>i {
   color: var(--primary-text);
   font-size: 1.5rem;
