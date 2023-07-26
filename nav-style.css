@@ -10,6 +10,13 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Global Styling to remove overflow on x axis when mobile-nav is visible */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 /* styling for the desktop nav header */
 
 .desktop-nav {
