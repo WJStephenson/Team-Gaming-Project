@@ -19,8 +19,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -51,8 +49,8 @@ body {
   background-color: var(--primary-bg);
   color: var(--primary-text);
   font-size: 1.5rem;
-  max-width: 400px;
-  width: 100%;
+  max-width: 50dvw;
+  width: 600px;
 }
 
 ::placeholder {
@@ -67,7 +65,7 @@ body {
   color: var(--primary-text);
   border: 1px solid var(--primary-text);
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .search-bar button:hover {
@@ -88,9 +86,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
-
-  /* Trying to fix the x Axis overflow */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -154,6 +149,14 @@ section a {
   color: var(--primary-text);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+
+#similar-container {
+  margin-bottom: 6rem;
+}
+
+.section-about {
+  margin-top: 2rem;
 }
 
 /* styling for the footer */
